@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="utad.actividad3.RegisterFragment"
-    android:background="#0c0000">
+    tools:context="utad.actividad3.LogginFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -16,21 +15,8 @@
         android:id="@+id/etName"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="103dp"
+        android:layout_marginTop="98dp"
         android:gravity="center" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/etEmail"
-        android:layout_marginTop="41dp"
-        android:gravity="center"
-        android:text="Email"
-        android:layout_below="@+id/etName"
-        android:layout_alignLeft="@+id/etName"
-        android:layout_alignStart="@+id/etName" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -38,22 +24,23 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/etPassword"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/etEmail"
-        android:layout_alignStart="@+id/etEmail"
-        android:text="Password" />
+        android:layout_marginTop="50dp"
+        android:text="Password"
+        android:layout_below="@+id/etName"
+        android:layout_alignLeft="@+id/etName"
+        android:layout_alignStart="@+id/etName" />
 
     <Button
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:text="Registrar"
-        android:id="@+id/btnRegistrar"
+        android:text="Loggin"
+        android:id="@+id/btnLoggin"
+        android:layout_marginTop="73dp"
+        android:textSize="20dp"
         android:layout_below="@+id/etPassword"
-        android:layout_marginTop="52dp"
-        android:layout_alignRight="@+id/etPassword"
-        android:layout_alignEnd="@+id/etPassword"
         android:layout_alignLeft="@+id/etPassword"
         android:layout_alignStart="@+id/etPassword"
-        android:background="#2ccd21"
-        android:textSize="20dp" />
+        android:layout_alignRight="@+id/etPassword"
+        android:layout_alignEnd="@+id/etPassword"
+        android:background="#2498eb" />
 </RelativeLayout>

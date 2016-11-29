@@ -2,15 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="utad.actividad3.LogginFragment">
+    tools:context="utad.actividad3.FragmentCreditos">
 
     <!-- TODO: Update blank fragment layout -->
-
-    <fragment
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="utad.actividad3.LogginFragment"
-        android:id="@+id/fragment2"
-        android:layout_gravity="left|top" />
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>
