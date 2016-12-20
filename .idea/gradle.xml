@@ -13,6 +13,8 @@
             <option value="$PROJECT_DIR$/examen1android" />
             <option value="$PROJECT_DIR$/examenandroid" />
             <option value="$PROJECT_DIR$/mylibrary" />
+            <option value="$PROJECT_DIR$/quickblox-android-sdk-core-2.6" />
+            <option value="$PROJECT_DIR$/quickblox-android-sdk-customobjects-2.6" />
           </set>
         </option>
         <option name="myModules">
@@ -22,6 +24,8 @@
             <option value="$PROJECT_DIR$/examen1android" />
             <option value="$PROJECT_DIR$/examenandroid" />
             <option value="$PROJECT_DIR$/mylibrary" />
+            <option value="$PROJECT_DIR$/quickblox-android-sdk-core-2.6" />
+            <option value="$PROJECT_DIR$/quickblox-android-sdk-customobjects-2.6" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Artes Marciales"
+            android:id="@+id/btnArtes"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Comida"
+            android:id="@+id/btnComida"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Lectura"
+            android:id="@+id/btnLectura"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Deportes"
+            android:id="@+id/btnDeportes"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Informatica"
+            android:id="@+id/btnInformatica"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Coches"
+            android:id="@+id/btnCoches"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -17,9 +17,10 @@ import utad.mylibrary.QBAdmin;
 import utad.mylibrary.QBAdminListener;
 
 public class Registro extends AppCompatActivity implements QBAdminListener {
-
+    MainActivity vista;
+    Registro vistaRegistro;
     EditText UsuarioRegistro,ContraseñaRegistro,Email;
-    Button Registrarse;
+    Button Registrarse,Volver;
     LoginControlador controlador;
     QBAdmin qbAdmin;
 
@@ -31,17 +32,36 @@ public class Registro extends AppCompatActivity implements QBAdminListener {
         ContraseñaRegistro = (EditText)findViewById(R.id.etContraseñaRegistro);
         Registrarse = (Button)findViewById(R.id.btnRegistro);
         Email = (EditText)findViewById(R.id.etEmail);
-        controlador = new LoginControlador(this);
+        Volver = (Button)findViewById(R.id.btnVolver);
+        controlador = new LoginControlador(vista,vistaRegistro);
         qbAdmin = new QBAdmin(this, this);
         qbAdmin.InicioQB();
 
-        Registrarse.setOnClickListener(new View.OnClickListener() {
+
+        Volver.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent myIntent = new Intent(Registro.this, MainActivity.class);
                 Registro.this.startActivity(myIntent);
             }
         });
+
+
+    }
+
+    @Override
+    public void registrado(boolean blregistrado) {
+        if (blregistrado=true){
+            Registrarse.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent myIntent = new Intent(Registro.this, MainActivity.class);
+                    Registro.this.startActivity(myIntent);
+                }
+            });
+        }else{
+            System.out.print("NO se ha registrado");
+        }
     }
 
     @Override

@@ -4,6 +4,12 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
 
+    repositories {
+        maven {
+            url "https://github.com/QuickBlox/quickblox-android-sdk-releases/raw/master/"
+        }
+    }
+
     defaultConfig {
         applicationId "utad.examenandroid"
         minSdkVersion 16
@@ -24,4 +30,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile project(':mylibrary')
+
 }

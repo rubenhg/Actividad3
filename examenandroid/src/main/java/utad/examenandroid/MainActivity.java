@@ -17,6 +17,8 @@ import utad.mylibrary.QBAdmin;
 import utad.mylibrary.QBAdminListener;
 
 public class MainActivity extends AppCompatActivity implements QBAdminListener {
+    MainActivity  vista;
+    Registro vistaRegistro;
 
     EditText Usuario,Contraseña;
     LoginControlador controlador;
@@ -28,11 +30,11 @@ public class MainActivity extends AppCompatActivity implements QBAdminListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        controlador = new LoginControlador(this);
+        controlador = new LoginControlador(vista,vistaRegistro);
         Usuario = (EditText)findViewById(R.id.etUsuario);
         Contraseña = (EditText)findViewById(R.id.etContraseña);
         Loggin = (Button)findViewById(R.id.btnLoggin);
-        Registrarse = (TextView)findViewById(R.id.btnRegistro);
+        Registrarse = (TextView)findViewById(R.id.lblRegistro);
 
 
         Registrarse.setOnClickListener(new View.OnClickListener() {
@@ -45,8 +47,13 @@ public class MainActivity extends AppCompatActivity implements QBAdminListener {
     }
 
     @Override
+    public void registrado(boolean blregistrado) {
+
+    }
+
+    @Override
     public void logeado(boolean bllogeado, QBUser user) {
-        if (bllogeado){
+        if (bllogeado=true){
             Intent myIntent = new Intent(MainActivity.this, Main2Activity.class);
             MainActivity.this.startActivity(myIntent);
         }else{
@@ -58,4 +65,6 @@ public class MainActivity extends AppCompatActivity implements QBAdminListener {
     public void datosDescargados(ArrayList<QBBaseCustomObject> datos) {
 
     }
+
+
 }

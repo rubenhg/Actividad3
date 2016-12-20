@@ -31,48 +31,6 @@ public class QBAdmin {
         QBSettings.getInstance().setAccountKey(ACCOUNT_KEY);
     }
 
-    public void Loggin(final String usuario, final String password) {
-
-
-        QBUser user = new QBUser(usuario, password);
-
-        QBUsers.signIn(user, new QBEntityCallback<QBUser>() {
-            @Override
-            public void onSuccess(QBUser user, Bundle params) {
-
-                listener.logeado(true);
-            }
-
-            @Override
-            public void onError(QBResponseException errors) {
-                System.out.println(errors + " !!!!!");
-                System.out.println("Usuario: " + usuario + ". Passw: " + password);
-                listener.logeado(false);
-            }
-        });
-
-    }
-    public void Register(String usuario, String password, String email){
-
-        final QBUser user = new QBUser(usuario, password);
-        user.setEmail(email);
-
-        QBUsers.signUp(user, new QBEntityCallback<QBUser>() {
-            @Override
-            public void onSuccess(QBUser user, Bundle args) {
-                System.out.println("Usuario Registrado.");
-
-            }
-
-            @Override
-            public void onError(QBResponseException errors) {
-                System.out.println(errors + "!!!!!");
-                System.out.println("Usuario No Registrado.");
-            }
-        });
-
-    }
-
     public void InicioQB() {
 
         QBAuth.createSession(new QBEntityCallback<QBSession>() {
@@ -91,6 +49,51 @@ public class QBAdmin {
         });
 
     }
+
+    public void Loggin(final String usuario, final String password) {
+
+
+        final QBUser user = new QBUser(usuario, password);
+
+        QBUsers.signIn(user, new QBEntityCallback<QBUser>() {
+            @Override
+            public void onSuccess(QBUser user, Bundle params) {
+
+               listener.logeado(true,user);
+            }
+
+            @Override
+            public void onError(QBResponseException errors) {
+                System.out.println(errors + " !!!!!");
+                System.out.println("Usuario: " + usuario + "Contraseña: " + password);
+                 listener.logeado(false,user);
+            }
+        });
+
+    }
+    public void Register(String usuario, String password, String email){
+
+        final QBUser user = new QBUser(usuario, password);
+        user.setEmail(email);
+
+        QBUsers.signUp(user, new QBEntityCallback<QBUser>() {
+            @Override
+            public void onSuccess(QBUser user, Bundle args) {
+                System.out.println("Registrado.");
+                listener.registrado(true);
+            }
+
+            @Override
+            public void onError(QBResponseException errors) {
+                System.out.println(errors);
+                System.out.println("Usuario No Registrado.");
+                listener.registrado(false);
+            }
+        });
+
+    }
+
+
 }
 
 

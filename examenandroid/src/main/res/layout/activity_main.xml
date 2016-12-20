@@ -29,6 +29,7 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:id="@+id/etContraseña"
         android:layout_above="@+id/btnLoggin"
         android:layout_alignLeft="@+id/etUsuario"
@@ -49,10 +50,10 @@
         android:layout_height="wrap_content"
         android:text="¿aun no te has registrado?"
         android:id="@+id/textView"
+        android:layout_marginBottom="49dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
-        android:layout_alignRight="@+id/lblUsuario"
-        android:layout_alignEnd="@+id/lblUsuario" />
+        android:layout_toLeftOf="@+id/lblRegistro"
+        android:layout_toStartOf="@+id/lblRegistro" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -61,8 +62,9 @@
         android:text="Registro"
         android:clickable="true"
         android:id="@+id/lblRegistro"
-        android:layout_alignTop="@+id/textView"
-        android:layout_alignLeft="@+id/btnLoggin" />
+        android:layout_below="@+id/btnLoggin"
+        android:layout_alignRight="@+id/etContraseña"
+        android:layout_alignEnd="@+id/etContraseña" />
 
     <TextView
         android:layout_width="wrap_content"
