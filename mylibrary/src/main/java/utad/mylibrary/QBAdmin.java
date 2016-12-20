@@ -75,7 +75,6 @@ public class QBAdmin {
 
         final QBUser user = new QBUser(usuario, password);
         user.setEmail(email);
-
         QBUsers.signUp(user, new QBEntityCallback<QBUser>() {
             @Override
             public void onSuccess(QBUser user, Bundle args) {
