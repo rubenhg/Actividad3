@@ -7,53 +7,79 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/etName"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="103dp"
-        android:gravity="center" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/etEmail"
-        android:layout_marginTop="41dp"
-        android:gravity="center"
-        android:text="Email"
-        android:layout_below="@+id/etName"
-        android:layout_alignLeft="@+id/etName"
-        android:layout_alignStart="@+id/etName" />
+        <TextView
+            android:text="Registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblregistro"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_weight="0.13"
+            android:fontFamily="monospace" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/etPassword"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/etEmail"
-        android:layout_alignStart="@+id/etEmail"
-        android:text="Password" />
+        <TextView
+            android:text="Usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblUsuario"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="87dp"
+            android:layout_below="@+id/lblregistro"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etUsuario"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/lblUsuario"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblPassword"
+            android:textSize="18sp"
+            android:text="Contraseña"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/etUsuario"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="35dp" />
 
     <Button
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:text="Registrar"
-        android:id="@+id/btnRegistrar"
-        android:layout_below="@+id/etPassword"
-        android:layout_marginTop="52dp"
-        android:layout_alignRight="@+id/etPassword"
-        android:layout_alignEnd="@+id/etPassword"
-        android:layout_alignLeft="@+id/etPassword"
-        android:layout_alignStart="@+id/etPassword"
-        android:background="#2ccd21"
-        android:textSize="20dp" />
+            android:text="Sign Up"
+            android:layout_width="348dp"
+            android:layout_height="60dp"
+            android:id="@+id/btnRegistro"
+            android:layout_weight="0.09"
+            android:background="#70abe5"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:padding="2dp"
+            android:layout_marginBottom="93dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/etPasword"
+        android:layout_below="@+id/lblPassword"
+        android:layout_marginTop="38dp"
+        android:layout_alignRight="@+id/etUsuario"
+        android:layout_alignEnd="@+id/etUsuario"
+        android:layout_alignLeft="@+id/etUsuario"
+        android:layout_alignStart="@+id/etUsuario" />
+
+
 </RelativeLayout>
